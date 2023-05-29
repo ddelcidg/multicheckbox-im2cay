@@ -8,8 +8,12 @@ import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 })
 export class AppComponent {
   form = new FormGroup({});
-  model: any = {};
+  //smodel: any = {};
+  model: any = {
+    multicheckbox: [0, 1, 2, 3, 4, 5, 6], // Set default selections
+  };
   options: FormlyFormOptions = {};
+
   fields: FormlyFieldConfig[] = [
     {
       key: 'multicheckbox',
@@ -32,10 +36,8 @@ export class AppComponent {
         valueProp: 'value',
         selectedProp: 'selected',
       },
-      defaultValue: {
-        option1: false,
-        option2: true,
-        option3: true,
+      expressionProperties: {
+        'model.myMultiCheckbox': '["option1", "option2", "option3"]',
       },
     },
   ];
