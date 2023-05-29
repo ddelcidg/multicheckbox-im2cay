@@ -19,7 +19,6 @@ export class AppComponent {
         placeholder: 'Placeholder',
         description: 'Description',
         required: true,
-
         options: [
           { value: 1, label: 'Option 1' },
           { value: 2, label: 'Option 2' },
@@ -30,11 +29,13 @@ export class AppComponent {
           { value: 7, label: 'Option 7' },
           { value: 8, label: 'Option 8' },
         ],
-        defaultValue: {
-          option1: true,
-          option2: true,
-          option3: true,
-        },
+        valueProp: 'value',
+        selectedProp: 'selected',
+      },
+      defaultValue: {
+        option1: false,
+        option2: true,
+        option3: true,
       },
     },
   ];
