@@ -10,7 +10,7 @@ export class AppComponent {
   form = new FormGroup({});
   //smodel: any = {};
   model: any = {
-    multicheckbox: [0, 1, 2, 3, 4, 5, 6], // Set default selections
+    multicheckbox: [true, true, false, true, true, true, false, false, true], // Set default selections
   };
   options: FormlyFormOptions = {};
 
